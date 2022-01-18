@@ -1,0 +1,81 @@
+*{box-sizing: border-box;}
+body {
+    background-color: #141414;
+    color: #fff;
+}
+.w-fit{
+    width: fit-content;
+}
+.movie-img {
+    width: 200px;
+}
+.movie-app {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+.movie-app::-webkit-scrollbar {width: 50px;}
+.movie-app::-webkit-scrollbar-thumb {background-color: #333;border-radius: 5px;}
+.movie-app::-webkit-scrollbar-track {background-color: #f8f9fa;}
+.movie {
+    padding: 4px;
+    background-color: #673ab7;
+    border-radius: 4px;
+    transition: transform .3s;
+    cursor: pointer;
+    position: relative;
+}
+.movie:hover {
+    transform: scale(1.05);
+}
+.movie-img {
+    width: 200px;
+    height: 300px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+.movie .add {
+    position: absolute;
+    background-color: rgba(0 , 0 , 0 , .3);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    top: calc(50% - 24px);
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transition: opacity .3s;
+}
+.movie:hover .add {opacity: 1;}
+
+@media (max-width: 575px) {
+    .movie-img  {
+        width:150px;
+        height:222px
+    }
+
+}
+.search-input {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+    
+}
+.search-input > input {
+    background-color: transparent;
+    display: block;
+    color: #fff;
+}
+.search-input:focus {outline: none;}
+@media (max-width: 575px) {
+    .search-input {
+        width: 80%;
+        font-size: 23px;
+    }
+    .search-input > input {
+        margin-top: 8px !important;
+        margin-bottom: 8px !important;
+    }
+}
